@@ -2,7 +2,7 @@
 # This file is generated using extract.py using pycparser
 ###########################################################
 # revision:
-#	v4.12
+#	wt-2017-06-03
 ###########################################################
 CMD_UNSPEC = 0
 CMD_GET_WIPHY = 1
