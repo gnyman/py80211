@@ -2,7 +2,7 @@
 # This file is generated using extract.py using pycparser
 ###########################################################
 # revision:
-#	wt-2017-06-03
+#	wt-2017-06-23
 ###########################################################
 from netlink.capi import *
 from defs import *
