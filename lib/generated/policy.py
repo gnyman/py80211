@@ -2,7 +2,7 @@
 # This file is generated using extract.py using pycparser
 ###########################################################
 # revision:
-#	v4.12-rc1-112-g5d473fe
+#	mac80211-next-for-davem-2017-06-13-902-g3dc0225
 ###########################################################
 from netlink.capi import *
 from defs import *
