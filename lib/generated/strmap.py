@@ -2,7 +2,7 @@
 # This file is generated using extract.py using pycparser
 ###########################################################
 # revision:
-#	v4.12-1722-gfa9e4a7
+#	v4.13-rc4-873-g7d304a8
 ###########################################################
 from defs import *
 nl80211_commands2str = {

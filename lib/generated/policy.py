@@ -2,7 +2,7 @@
 # This file is generated using extract.py using pycparser
 ###########################################################
 # revision:
-#	v4.12-1722-gfa9e4a7
+#	v4.13-rc4-873-g7d304a8
 ###########################################################
 from netlink.capi import *
 from defs import *
@@ -97,8 +97,7 @@ nl80211_policy[ATTR_CIPHER_SUITE_GROUP].type = NLA_U32
 nl80211_policy[ATTR_WPA_VERSIONS].type = NLA_U32
 nl80211_policy[ATTR_PID].type = NLA_U32
 nl80211_policy[ATTR_4ADDR].type = NLA_U8
-nl80211_policy[ATTR_PMKID].type = NLA_BINARY
-nl80211_policy[ATTR_PMKID].max_len = 16
+nl80211_policy[ATTR_PMKID].min_len = 16
 nl80211_policy[ATTR_DURATION].type = NLA_U32
 nl80211_policy[ATTR_COOKIE].type = NLA_U64
 nl80211_policy[ATTR_TX_RATES].type = NLA_NESTED
@@ -152,6 +151,7 @@ nl80211_policy[ATTR_VHT_CAPABILITY].min_len = 12
 nl80211_policy[ATTR_SCAN_FLAGS].type = NLA_U32
 nl80211_policy[ATTR_P2P_CTWINDOW].type = NLA_U8
 nl80211_policy[ATTR_P2P_OPPPS].type = NLA_U8
+nl80211_policy[ATTR_LOCAL_MESH_POWER_MODE].type = NLA_U32
 nl80211_policy[ATTR_ACL_POLICY].type = NLA_U32
 nl80211_policy[ATTR_MAC_ADDRS].type = NLA_NESTED
 nl80211_policy[ATTR_STA_CAPABILITY].type = NLA_U16
@@ -343,8 +343,7 @@ nl80211_bss_select_policy[BSS_SELECT_ATTR_RSSI_ADJUST].min_len = 2
 #
 nl80211_nan_func_policy = nla_policy_array(NAN_FUNC_ATTR_MAX + 1)
 nl80211_nan_func_policy[NAN_FUNC_TYPE].type = NLA_U8
-nl80211_nan_func_policy[NAN_FUNC_SERVICE_ID].type = NLA_BINARY
-nl80211_nan_func_policy[NAN_FUNC_SERVICE_ID].max_len = 6
+nl80211_nan_func_policy[NAN_FUNC_SERVICE_ID].min_len = 6
 nl80211_nan_func_policy[NAN_FUNC_PUBLISH_TYPE].type = NLA_U8
 nl80211_nan_func_policy[NAN_FUNC_PUBLISH_BCAST].type = NLA_FLAG
 nl80211_nan_func_policy[NAN_FUNC_SUBSCRIBE_ACTIVE].type = NLA_FLAG
