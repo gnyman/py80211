@@ -133,7 +133,7 @@ class station(nl80211_managed_object):
 		return struct.unpack('i', mac_hash)[0]
 
 	def __cmp__(self, other):
-		return self.__hash__() - other.__hash__()
+		return (self.__hash__() - other.__hash__()) & sys.maxint
 
 class station_list(custom_handler):
 	def __init__(self, ifidx, access=None, kind=nl.NL_CB_DEFAULT):
